@@ -5,13 +5,35 @@
 
 ## Endpoints
 
+### Create Note
+- **POST** `/`
+- **Body:**
+  ```json
+  {
+    "title": "string",
+    "content": "string",
+    "image": "string (optional)"
+  }
+  ```
+- **Response:** `201 Created`
+  ```json
+  {
+    "id": "autoincrement",
+    "title": "string",
+    "content": "string",
+    "image": "string (optional)",
+    "createdAt": "ISO 8601 timestamp",
+    "updatedAt": "ISO 8601 timestamp"
+  }
+  ```
+
 ### Get All Notes
 - **GET** `/`
 - **Response:** `200 OK`
   ```json
   [
     {
-        "id": "uuid",
+        "id": "autoincrement",
         "title": "string",
         "content": "string",
         "image": "string (optional)",
@@ -26,7 +48,7 @@
 - **Response:** `200 OK`
   ```json
   {
-    "id": "uuid",
+    "id": "autoincrement",
     "title": "string",
     "content": "string",
     "image": "string (optional)",
@@ -35,28 +57,6 @@
   }
   ```
 - **Response:** `404 Not Found`
-
-### Create Note
-- **POST** `/`
-- **Body:**
-  ```json
-  {
-    "title": "string",
-    "content": "string",
-    "image": "string (optional)"
-  }
-  ```
-- **Response:** `201 Created`
-  ```json
-  {
-    "id": "uuid",
-    "title": "string",
-    "content": "string",
-    "image": "string (optional)",
-    "createdAt": "ISO 8601 timestamp",
-    "updatedAt": "ISO 8601 timestamp"
-  }
-  ```
 
 ### Update Note
 - **PATCH** `/:id`
@@ -71,7 +71,7 @@
 - **Response:** `200 OK`
   ```json
   {
-    "id": "uuid",
+    "id": "autoincrement",
     "title": "string",
     "content": "string",
     "image": "string (optional)",

@@ -1,0 +1,12 @@
+curl -H "Content-Type: application/json" \
+     -d '{"title":"first notes", "content": "this is the first notes content"}' \
+     http://localhost:3000/notes
+
+curl -H "Content-Type: application/json" \
+     -X PATCH \
+     -d '{"title":"updated notes", "content": "this is the updated notes content"}' \
+     http://localhost:3000/notes/1
+
+curl -H "Content-Type: application/json" \
+     -X DELETE \
+     http://localhost:3000/notes/1
