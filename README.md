@@ -1,11 +1,14 @@
-# API SPEC
+# Notes Apps
+> Simple Notes Apps for learning and understanding the usage of nestjs as backend server combine with react as frontend
 
-## Base URL
+## API Spec 
+
+### Base URL
 `/api/notes`
 
-## Endpoints
+### Endpoints
 
-### Create Note
+#### Create Note
 - **POST** `/`
 - **Body:**
   ```json
@@ -27,7 +30,7 @@
   }
   ```
 
-### Get All Notes
+#### Get All Notes
 - **GET** `/`
 - **Response:** `200 OK`
   ```json
@@ -43,7 +46,7 @@
   ]
   ```
 
-### Get Single Note
+#### Get Single Note
 - **GET** `/:id`
 - **Response:** `200 OK`
   ```json
@@ -58,7 +61,7 @@
   ```
 - **Response:** `404 Not Found`
 
-### Update Note
+#### Update Note
 - **PATCH** `/:id`
 - **Body:**
   ```json
@@ -81,7 +84,13 @@
   ```
 - **Response:** `404 Not Found`
 
-### Delete Note
+#### Delete Note
 - **DELETE** `/:id`
 - **Response:** `204 No Content`
 - **Response:** `404 Not Found`
+
+
+## Frontend (React with vite and tailwind)
+
+### Preview
+![Preview Notes Apps](./preview.png)
